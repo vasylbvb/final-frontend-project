@@ -1,0 +1,19 @@
+{
+  "name": "final_project",
+  "description": "final frontend course work",
+  "main": "index.js",
+  "authors": [
+    "Vasyl Bats"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ]
+}

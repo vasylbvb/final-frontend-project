@@ -1,0 +1,18 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "final frontend course work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vasyl Bats",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-less": "^3.1.0"
+  }
+}
