@@ -1,10 +1,11 @@
 var gulp = require("gulp"),
     less = require("gulp-less"),
     nano = require("gulp-cssnano"),
-    browserSync = require("browser-sync").create();
+    browserSync = require("browser-sync").create(),
+    rjo = require("gulp-requirejs-optimize");
 
 gulp.task("html", function () {
-    return gulp.src("src/index.html")
+    return gulp.src("src/*.html")
         .pipe(gulp.dest("dist"));
 });
 
@@ -45,15 +46,23 @@ gulp.task("css", function () {
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
-
+gulp.task("app-js", function () {
+    return gulp.src("src/js/map.js")
+        .pipe(rjo({
+            mainConfigFile: "src/js/map.js",
+            out: "map.min.js"
+        }))
+        .pipe(gulp.dest("dist/js"))
+});
 gulp.task("watch", function () {
     browserSync.init({
         server: "dist"
     });
 
     gulp.watch("src/css/**/*.less", ["css"]);
+    gulp.watch("src/js/**/*.js", ["app-js"]);
     gulp.watch("src/**/*.html", ["html"]);
     gulp.watch("dist/**/*.html").on("change", browserSync.reload);
 });
 
-gulp.task("default", ["html", "css", "img", "fonts", "glyphicons", "bootstrapcss", "bootstrapjs", "jqueryjs", "watch"]);
+gulp.task("default", ["html", "css", "img", "fonts", "glyphicons", "bootstrapcss", "bootstrapjs", "jqueryjs", "app-js", "watch"]);

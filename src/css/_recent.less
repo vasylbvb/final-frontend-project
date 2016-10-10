@@ -1,0 +1,110 @@
+@import "_vars";
+
+.recent {
+  width: @main-width;
+  height: 20px;
+  display: block;
+  margin: 0 auto 23px;
+  padding: 0;
+
+  & > .row {
+    height: 100%;
+    margin: 0;
+    position: relative;
+
+    & > .recent-works {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #e8603c;
+      font-size: 18px;
+      word-spacing: 3px;
+      height: 100%;
+      vertical-align: middle;
+    }
+    & > .greyline {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85%;
+      height: 100%;
+      content: '';
+      background: #c3c3c3;
+    }
+  }
+}
+
+.recent-shortcuts {
+  width: @main-width;
+  height: 245px;
+  display: block;
+  margin: 0 auto 48px;
+  padding: 0;
+
+  & > .recent-shortcuts-row {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    & > .item1, .item2, .item3, .item4 {
+      width: 220px;
+      height: 100%;
+      padding: 0;
+
+      & > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        & > img {
+          width: 100%;
+          height: 183px;
+        }
+
+        & > .caption {
+          display: block;
+          width: 100%;
+          height: 62px;
+          margin: 0;
+          border-width: 0px 1px 1px 1px;
+          border-style: solid;
+          border-color: #dbdbdb;
+          padding: 14px;
+          word-spacing: 2px;
+
+          & > h3 {
+            margin: 0;
+            font-size: 16px;
+            color: @nav-link-color;
+            text-decoration: none;
+            margin-bottom: 7px;
+          }
+
+          & > p {
+            margin: 0;
+            font-size: 11px;
+            color: @nav-link-active-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      & > a:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      & > a:focus {
+        text-decoration: none;
+      }
+    }
+    & > .item1, .item2, .item3 {
+      margin-right: 20px;
+    }
+  }
+}

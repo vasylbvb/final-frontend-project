@@ -1,0 +1,139 @@
+@import "_vars";
+@import "_fonts";
+
+.footer {
+  margin-top: -263px;
+  height: 263px;
+}
+
+.foot-line {
+  height: 100%;
+  padding: 0;
+  background: @outer-stripes-color;
+}
+
+.middle-foot-box {
+  height: 100%;
+  width: @main-width;
+  background: @nav-link-active-color;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 100%;
+    background: #FFFFFF;
+    width: 10px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    background: #FFFFFF;
+    width: 10px;
+  }
+}
+
+.middle-foot-row {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.firstcolumn, .secondcolumn, .thirdcolumn {
+  height: 100%;
+  margin: 0;
+  padding: 38px 20px 30px 35px;
+  color: #FFFFFF;
+  overflow: hidden;
+
+  & > h2 {
+    font-size: 20px;
+    word-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 28px
+  }
+
+  & > p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+}
+
+.firstmail, .secondmail, .thirdmail {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-bottom: 10px;
+
+  & > p {
+    margin-bottom: 5px;
+
+    & > a, .history {
+      color: #f3b29d;
+    }
+  }
+}
+
+.thirdcolumn {
+  & > div {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+    & > p {
+      margin-bottom: 0;
+      & > a {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.socials {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  & > li {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    float: left;
+    box-shadow: 0 1px #cc5a35;
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+#facebook {
+  background: url("../images/icon_facebook.png");
+}
+#twitter {
+  background: url("../images/icon_twitter.png");
+}
+#mail {
+  background: url("../images/icon_email.png");
+}
+#rss {
+  background: url("../images/icon_rss.png");
+}
+#vimeo {
+  background: url("../images/icon_vimeo.png");
+}
