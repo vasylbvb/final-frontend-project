@@ -41,23 +41,137 @@
   height: 820px;
   padding: 0;
   margin: 0 auto 40px;
+  position: relative;
 }
 
 .left-side-contact {
   float: left;
-  width: 700px;
+  width: 675px;
   height: 100%;
-  margin: 0 20px 0 0;
+  margin: 0 45px 0 0;
   padding: 0;
 }
 
 #map {
-  width: 675px;
+  width: 100%;
   height: 400px;
+  margin: 0 0 35px 0;
+}
+
+.text-and-form {
+  width: 100%;
+  height: 385px;
+  & > .text {
+    float: left;
+    width: 180px;
+    height: 100%;
+    margin-right: 30px;
+    color: #4e4e4e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    & > p {
+      margin-bottom: 10px;
+    }
+    & > div > span {
+      color: @nav-link-active-color;
+      font-weight: bold;
+    }
+  }
+  & > .form-box {
+    float: left;
+    width: 465px;
+    height: 100%;
+  }
+}
+.validate-this .error {
+  border-color: red;
+}
+
+.validate-this .error-text {
+  display: block;
+  color: red;
+}
+#firstName, #lastName, #eMail {
+  width: 217px;
+  border-color: @nav-link-active-color;
+  font-size: 14px;
+}
+#message {
+  //width: 100%;
+  border-color: @nav-link-active-color;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {color: @nav-link-active-color !important; word-spacing: 3px !important; opacity: 1; transition: opacity 0.3s ease}
+input::-moz-placeholder {color: @nav-link-active-color !important; word-spacing: 3px !important; opacity: 1; transition: opacity 0.3s ease}
+input:-moz-placeholder {color: @nav-link-active-color !important; word-spacing: 3px !important; opacity: 1; transition: opacity 0.3s ease}
+input:-ms-input-placeholder {color: @nav-link-active-color !important; word-spacing: 3px !important; opacity: 1; transition: opacity 0.3s ease}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease}
+input:focus::-moz-placeholder {opacity: 0; transition: opacity 0.3s ease}
+input:focus:-moz-placeholder {opacity: 0; transition: opacity 0.3s ease}
+input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease}
+
+
+textarea::-webkit-input-placeholder {color: @nav-link-active-color !important; opacity: 1; transition: opacity 0.3s ease}
+textarea::-moz-placeholder {color: @nav-link-active-color !important; opacity: 1; transition: opacity 0.3s ease}
+textarea:-moz-placeholder {color: @nav-link-active-color !important; opacity: 1; transition: opacity 0.3s ease}
+textarea:-ms-input-placeholder {color: @nav-link-active-color !important; opacity: 1; transition: opacity 0.3s ease}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease}
+textarea:focus::-moz-placeholder {opacity: 0; transition: opacity 0.3s ease}
+textarea:focus:-moz-placeholder {opacity: 0; transition: opacity 0.3s ease}
+textarea:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease}
+
+.btn-danger {
+  width: 67px;
+  height: 31px;
+  color: #FFFFFF;
+  line-height: 1;
 }
 
 aside {
   float: left;
   width: 220px;
   height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  & .grey-stripe {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 14px;
+    margin-bottom: 20px;
+    background: @grey-line-color;
+  }
+  & h3 {
+    float: left;
+    font-size: 14px;
+    word-spacing: 3px;
+    color: @nav-link-active-color;
+    margin: -34px 0 0;
+    background: #FFFFFF;
+    border-right: 16px solid #FFFFFF;
+  }
+  & div, p, span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: rgb(70, 70, 70);
+  }
+  & #supercoolstuff {
+    margin-bottom: 40px;
+  }
+}
+#gallery {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+  & tbody {
+    width: 100%;
+    & td {
+      border: 1px solid @nav-link-active-color;
+      width: 50px;
+      height: 50px;
+      background: @outer-stripes-color;
+    }
+  }
 }
