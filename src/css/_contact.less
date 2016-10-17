@@ -1,41 +1,6 @@
 @import "_vars";
 @import "_fonts";
 
-.top-stripe-title {
-  width: @main-width;
-  height: 61px;
-  margin: -61px auto 25px;
-  padding: 19px;
-  background: @nav-link-active-color;
-  position: relative;
-  & > h1 {
-    font-size: 24px;
-    color: #FFFFFF;
-    margin: 0;
-    word-spacing: 3px;
-    line-height: 1;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    height: 100%;
-    background: #FFFFFF;
-    width: 10px;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -10px;
-    height: 100%;
-    background: #FFFFFF;
-    width: 10px;
-  }
-}
-
 .main-content-contact {
   width: @main-width;
   height: 820px;
@@ -53,7 +18,7 @@
 }
 
 #map {
-  width: 100%;
+  max-width: 100%;
   height: 400px;
   margin: 0 0 35px 0;
 }
@@ -82,6 +47,9 @@
     width: 465px;
     height: 100%;
   }
+}
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 .validate-this .error {
   border-color: red;

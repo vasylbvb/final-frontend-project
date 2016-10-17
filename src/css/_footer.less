@@ -3,20 +3,16 @@
 
 .footer {
   margin-top: -263px;
-  height: 263px;
-}
-
-.foot-line {
-  height: 100%;
-  padding: 0;
-  background: @outer-stripes-color;
+  min-height: @footer-main-height;
+  max-width: 100%;
+  clear: both;
 }
 
 .middle-foot-box {
-  height: 100%;
-  width: @main-width;
+  min-height: @footer-main-height;
+  max-width: @main-width;
   background: @nav-link-active-color;
-  margin: 0 auto;
+  margin: -@footer-main-height auto 0;
   padding: 0;
   display: block;
   position: relative;
@@ -26,7 +22,7 @@
     position: absolute;
     top: 0;
     left: -10px;
-    height: 100%;
+    min-height: 263px;
     background: #FFFFFF;
     width: 10px;
   }
@@ -36,22 +32,22 @@
     position: absolute;
     top: 0;
     right: -10px;
-    height: 100%;
+    min-height: 263px;
     background: #FFFFFF;
     width: 10px;
   }
 }
 
 .middle-foot-row {
-  height: 100%;
-  width: 100%;
+  min-height: @footer-main-height;
+  max-width: @main-width;
   margin: 0;
 }
 
 .firstcolumn, .secondcolumn, .thirdcolumn {
-  height: 100%;
+  min-height: @footer-main-height;
   margin: 0;
-  padding: 38px 20px 30px 35px;
+  padding: 38px 20px 0 35px;
   color: #FFFFFF;
   overflow: hidden;
 

@@ -14,18 +14,19 @@ $.getJSON("js/database/databaseTables.json", function (dani) {
 
 (function () {
     var form = document.querySelector(".validate-this");
-    var textFn = form.firstName,
-        textLn = form.lastName,
-        textEmail = form.eMail,
-        textMsg = form.message;
+    if (form) {
+        var textFn = form.firstName,
+            textLn = form.lastName,
+            textEmail = form.eMail,
+            textMsg = form.message;
 
-    form.addEventListener("submit", validate);
-
+        form.addEventListener("submit", validate);
+    }
     function validate(e) {
         e.preventDefault();
 
-        var form = this,
-            inputs = form.querySelectorAll("[data-error]");
+        var f = this,
+            inputs = f.querySelectorAll("[data-error]");
 
         clear(inputs, function () {
             checkIsEmpty(inputs);
@@ -46,7 +47,7 @@ $.getJSON("js/database/databaseTables.json", function (dani) {
             if (!isEmpty) {
                 setTimeout(function () {
                     alert("checking is complete");
-                    form.submit();
+                    f.submit();
                 }, 300);
             }
 
@@ -78,29 +79,38 @@ $.getJSON("js/database/databaseTables.json", function (dani) {
             if (callback) callback();
         }
     }
+
+
+    if (form) {
+        form.addEventListener("submit", function () {
+            event.preventDefault();
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/feedback");
+            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.onreadystatechange = function () {
+                if (this.readyState !== 4) {
+                    return;
+                }
+                var out = document.createElement("div");
+                var jsonString = this.responseText;
+                out.innerText = jsonString;
+                document.body.appendChild(out);
+            };
+            var data = {
+                firstName: "",
+                lastName: "",
+                emailAddress: "",
+                message: ""
+            };
+            var str = JSON.stringify(data);
+            xhr.send(str);
+        });
+    }
 }());
 
 var sbmtBtn = document.getElementById("sbmBtn");
 
-sbmBtn.addEventListener("click", function(){
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/feedback");
-    xhr.setRequestHeader("Content-Type", "application/json")
-    xhr.onreadystatechange = function(){
-        if(this.readyState !==4){
-            return;
-        }
-        var out = document.createElement("div");
-        var jsonString = this.responseText;
-        out.innerText = jsonString;
-        document.body.appendChild(out);
-    };
-    var data ={
-        firstName: "",
-        lastName: "",
-        emailAddress: "",
-        message: ""
-    };
-    var str = JSON.stringify(data);
-    xhr.send(str);
+$(".preview-thumbnail").click(function () {
+    var res = parseFloat(this.getAttribute("data-index"));
+    $('.main-slider').carousel(res);
 });

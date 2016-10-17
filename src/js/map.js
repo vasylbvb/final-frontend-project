@@ -9,3 +9,4 @@ function myMap() {
     });
     marker.setMap(map);
 }
+

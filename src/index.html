@@ -1,43 +1,56 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <section class="content-wrapper">
     <header class="heading">
-        <div class="container sky">
-            <div class="logo-container">
-                <div class="logo">
-                    <a href="#" class="logo-link">
-                        <img class="logo-img" src="images/Logo.png" alt="logo"/>
-                    </a>
-                </div>
+        <nav class="navbar navbar-default navglobal" role="navigation">
+            <div class="container sky">
+                <row class="navigation-row">
+                    <div class="navbar-header navbar-left col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <a href="index.html" class="navbar-brand" target="_self">
+                            <img class="logo-img" src="images/Logo.png" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="main-nav collapse navbar-collapse navbar-right col-lg-7 col-md-7 col-sm-6 col-xs-6"
+                         id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right main-nav-list">
+                            <li class="nav-item-active"><a href="index.html">Home<span class="sr-only">(поточний)</span></a>
+                            </li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="portfolio_item.html" target="_self">Portfolio</a></li>
+                            <li><a href="contact.html" target="_self">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbtn-box navbar-right hidden-lg hidden-md visible-sm-block visible-xs-block col-sm-2 col-xs-2">
+                        <button type="button" class="navbtn navbar-toggle navbar-right collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </row>
             </div>
-            <div class="main-nav-container">
-                <nav class="main-nav-wrapper">
-                    <ul class="main-nav">
-                        <li class="nav-item-active"><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="portfolio_item.html" target="_self">Portfolio</a></li>
-                        <li><a href="contact.html" target="_self">Contact us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        </nav>
     </header>
     <main class="content">
         <div class="container-fluid top-stripe">
         </div>
-
         <div class="container slider">
-            <div class="row">
-                <div id="carousel-example-generic" class="carousel slide col-xs-12" data-ride="carousel">
-                    <!-- Indicators
+            <div class="row sliderrow">
+                <div id="carousel-example-generic" class="carousel main-slider slide col-lg-12 col-md-12 col-sm-0"
+                     data-ride="carousel">
+                    <!--Indicators
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -46,8 +59,7 @@
                         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
                     </ol>-->
-
-                    <!-- Обгортка для слайдів -->
+                    <!--Обгортка для слайдів-->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="/images/slide1_fixed.jpg" alt="slide1">
@@ -103,7 +115,7 @@
                         </div>
                     </div>
 
-                    <!-- Управління -->
+                    <!--Управління-->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Попередній</span>
@@ -118,32 +130,32 @@
 
         <div class="container picturesrow">
             <div class="row" id="photoline">
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut1.jpg" alt="slide1">
                     </a>
                 </div>
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut2.jpg" alt="slide2">
                     </a>
                 </div>
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut3.jpg" alt="slide3">
                     </a>
                 </div>
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut4.jpg" alt="slide4">
                     </a>
                 </div>
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut5.jpg" alt="slide5">
                     </a>
                 </div>
-                <div class="col-xs-2 item">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 item">
                     <a href="#">
                         <img src="/images/shortcut6.jpg" alt="slide6">
                     </a>
@@ -153,7 +165,7 @@
 
         <div class="container articles">
             <div class="row" id="article">
-                <div class="col-xs-4 artic">
+                <div class="col-xs-12 col-xs-12 col-md-6 col-lg-4 artic">
                     <div class="row art">
                         <div class="article-heading-image col-xs-2">
                             <img src="/images/icon_gear.png" alt="gear">
@@ -180,13 +192,8 @@
                             <a href="#" class="more-btn ">more</a>
                         </div>
                     </div>
-                    <!--<div class="row btn1">
-                        <div class="btnmore col-xs-3">
-
-                        </div>
-                    </div>-->
                 </div>
-                <div class="col-xs-4 artic">
+                <div class="col-xs-12 col-xs-12 col-md-6 col-lg-4 artic">
                     <div class="row art">
                         <div class="article-heading-image col-xs-2">
                             <img src="/images/icon_check.png" alt="check">
@@ -211,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 artic" id="thirdcol">
+                <div class="col-xs-12 col-xs-12 col-md-6 col-lg-4 artic" id="thirdcol">
                     <div class="row art">
                         <div class="article-heading-image col-xs-2">
                             <img src="/images/icon_user.png" alt="user">
@@ -238,13 +245,16 @@
                 </div>
             </div>
         </div>
+
         <div class="container recent">
-            <div class="greyline"></div>
-            <h2 class="recent-works">Recent works</h2>
+            <div class="row recentlinerow">
+                <div class="greyline hidden-md hidden-sm hidden-xs"></div>
+                <h2 class="recent-works">Recent works</h2>
+            </div>
         </div>
         <div class="container recent-shortcuts">
             <div class="row recent-shortcuts-row">
-                <div class="item1 col-xs-3">
+                <div class="preview-thumbnail item1 col-xs-12 col-sm-6 col-md-6 col-lg-3" data-index="0">
                     <a href="#" class="imageandcaption">
                         <img src="/images/recent_01.png" alt="pict1">
                         <div class="caption">
@@ -253,7 +263,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="item2 col-xs-3">
+                <div class="preview-thumbnail item2 col-xs-12 col-sm-6 col-md-6 col-lg-3" data-index="1">
                     <a href="#" class="imageandcaption">
                         <img src="/images/recent_02.png" alt="pict2">
                         <div class="caption">
@@ -262,7 +272,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="item3 col-xs-3">
+                <div class="preview-thumbnail item3 col-xs-12 col-sm-6 col-md-6 col-lg-3" data-index="2">
                     <a href="#" class="imageandcaption">
                         <img src="/images/recent_03.png" alt="pict3">
                         <div class="caption">
@@ -271,7 +281,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="item4 col-xs-3">
+                <div class="preview-thumbnail item4 col-xs-12 col-sm-6 col-md-6 col-lg-3" data-index="3">
                     <a href="#" class="imageandcaption">
                         <img src="/images/recent_04.png" alt="pict4">
                         <div class="caption">
@@ -282,54 +292,57 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid bottom-stripe">
+        </div>
     </main>
+
 </section>
 <footer class="footer">
-    <div class="container-fluid foot-line">
-        <div class="container middle-foot-box">
-            <div class="row middle-foot-row">
-                <div class="firstcolumn col-xs-4">
-                    <h2>About Jetro</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci at, blanditiis
-                        dignissimos earum explicabo in iure nam neque repellat similique soluta.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga tenetur ullam.</p>
+    <div class="container middle-foot-box">
+        <div class="row middle-foot-row">
+            <div class="firstcolumn col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <h2>About Jetro</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci at, blanditiis
+                    dignissimos earum explicabo in iure nam neque repellat similique soluta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga tenetur ullam.</p>
+            </div>
+            <div class="secondcolumn col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <h2>Twitter widget</h2>
+                <div class="firstmail">
+                    <p><a href="mailto:someone@pixelmater.com">@pixelmater</a>What an awesome design with great
+                        functionality :)</p>
+                    <p class="history">about 1 hour ago</p>
                 </div>
-                <div class="secondcolumn col-xs-4">
-                    <h2>Twitter widget</h2>
-                    <div class="firstmail">
-                        <p><a href="mailto:someone@pixelmater.com">@pixelmater</a>What an awesome design with great functionality :)</p>
-                        <p class="history">about 1 hour ago</p>
-                    </div>
-                    <div class="secondmail">
-                        <p><a href="mailto:someone@designdude.com">@designdude</a>What an awesome design with great functionality :)</p>
-                        <p class="history">about 2 hours ago</p>
-                    </div>
-                    <div class="thirdmail">
-                        <p>Follow <a href="mailto:someone@bestpsdfreebies.com">@bestpsdfreebies</a></p>
-                    </div>
+                <div class="secondmail">
+                    <p><a href="mailto:someone@designdude.com">@designdude</a>What an awesome design with great
+                        functionality :)</p>
+                    <p class="history">about 2 hours ago</p>
                 </div>
-                <div class="thirdcolumn col-xs-4">
-                    <h2>Contuct us</h2>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet illum nostrum qui!</p>
-                    </div>
-                    <div>
-                        <p>
-                            <a href="mailto:information@jetro.com">information@jetro.com</a>
-                        </p>
-                        <p>
-                            1.222.333.4444
-                        </p>
-                    </div>
-                    <div class="list-of-socials">
-                        <ul class="socials">
-                            <li><a href="https://www.facebook.com/" target="_blank" id="facebook"></a></li>
-                            <li><a href="https://twitter.com/" target="_blank" id="twitter"></a></li>
-                            <li><a href="https://accounts.google.com/" target="_blank" id="mail"></a></li>
-                            <li><a href="https://www.rss.com/" target="_blank" id="rss"></a></li>
-                            <li><a href="https://vimeo.com/" target="_blank" id="vimeo"></a></li>
-                        </ul>
-                    </div>
+                <div class="thirdmail">
+                    <p>Follow <a href="mailto:someone@bestpsdfreebies.com">@bestpsdfreebies</a></p>
+                </div>
+            </div>
+            <div class="thirdcolumn col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <h2>Contuct us</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet illum nostrum qui!</p>
+                </div>
+                <div>
+                    <p>
+                        <a href="mailto:information@jetro.com">information@jetro.com</a>
+                    </p>
+                    <p>
+                        1.222.333.4444
+                    </p>
+                </div>
+                <div class="list-of-socials">
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/" target="_blank" id="facebook"></a></li>
+                        <li><a href="https://twitter.com/" target="_blank" id="twitter"></a></li>
+                        <li><a href="https://accounts.google.com/" target="_blank" id="mail"></a></li>
+                        <li><a href="https://www.rss.com/" target="_blank" id="rss"></a></li>
+                        <li><a href="https://vimeo.com/" target="_blank" id="vimeo"></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -338,7 +351,5 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/vendor.min.js"></script>
 <script src="js/app.min.js"></script>
-
-
 </body>
 </html>
