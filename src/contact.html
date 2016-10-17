@@ -46,84 +46,90 @@
     <main class="content">
         <div class="container-fluid top-stripe">
         </div>
+        <div class="secret-top hidden-xs"></div>
         <div class="container top-stripe-title">
             <h1>Contact us</h1>
         </div>
         <div class="container main-content-contact">
-            <div class="left-side-contact">
-                <div id="map"></div>
-                <div class="text-and-form">
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis dignissimos dolorem
-                            eius explicabo incidunt ipsum nostrum quidem, quis sed.
-                        </p>
-                        <div>
-                            <span>Brain Academy</span>
-                            <div>Bandera str., 33,</div>
-                            <div>Ternopil</div>
-                            <div>Ukraine</div>
-                            <div>46000</div>
+            <div class="row globalrow">
+                <div class="left-side-contact col-lg-9 col-sm-9 col-sm-12 col-xs-12">
+                    <div class="row maprow">
+                        <div id="map" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+                    </div>
+                    <div class="row text-form-row text-and-form">
+                        <div class="text col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis dignissimos
+                                dolorem
+                                eius explicabo incidunt ipsum nostrum quidem, quis sed.
+                            </p>
+                            <div>
+                                <span>Brain Academy</span>
+                                <div>Bandera str., 33,</div>
+                                <div>Ternopil</div>
+                                <div>Ukraine</div>
+                                <div>46000</div>
+                            </div>
+                        </div>
+                        <div class="form-box col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <form role="form" action="#" name="letterForm" id="frm" class="validate-this">
+                                <div class="form-group">
+                                    <label for="firstName" class="sr-only">First name</label>
+                                    <input type="text" class="form-control input-lg" name="firstName" id="firstName"
+                                           placeholder="First name" data-error="type the first name in here">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="sr-only">Last name</label>
+                                    <input type="text" class="form-control input-lg" name="lastName" id="lastName"
+                                           placeholder="Last name" data-error="type the last name in here">
+                                </div>
+                                <div class="form-group">
+                                    <label for="eMail" class="sr-only">Email</label>
+                                    <input type="email" class="form-control input-lg" name="eMail" id="eMail"
+                                           placeholder="Email address" data-error="what's your email?">
+                                </div>
+                                <textarea class="form-control input-lg" name="message" id="message" rows="5"
+                                          placeholder="message" data-error="here must be some text"></textarea>
+                                <button type="submit" class="btn btn-danger" id="sbmBtn">Submit</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="form-box">
-                        <form role="form" action="#" name="letterForm" id="frm" class="validate-this">
-                            <div class="form-group">
-                                <label for="firstName" class="sr-only">First name</label>
-                                <input type="text" class="form-control input-lg" name="firstName" id="firstName"
-                                       placeholder="First name" data-error="type the first name in here">
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName" class="sr-only">Last name</label>
-                                <input type="text" class="form-control input-lg" name="lastName" id="lastName"
-                                       placeholder="Last name" data-error="type the last name in here">
-                            </div>
-                            <div class="form-group">
-                                <label for="eMail" class="sr-only">Email</label>
-                                <input type="email" class="form-control input-lg" name="eMail" id="eMail"
-                                       placeholder="Email address" data-error="what's your email?">
-                            </div>
-                            <textarea class="form-control input-lg" name="message" id="message" rows="5"
-                                      placeholder="message" data-error="here must be some text"></textarea>
-                            <button type="submit" class="btn btn-danger" id="sbmBtn">Submit</button>
-                        </form>
-                    </div>
                 </div>
-
+                <aside class="right-side-contact col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="grey-stripe"></div>
+                    <h3>About Jetro</h3>
+                    <p id="about_jetro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores error incidunt iure
+                        nobis quisquam repellendus repudiandae soluta tempore, tenetur. Accusantium aliquid dolor enim
+                        exercitationem expedita illo labore magnam nisi sed suscipit.</p>
+                    <div class="grey-stripe"></div>
+                    <h3>Categories</h3>
+                    <div>Video <span>(3)</span></div>
+                    <div>Sports <span>(5)</span></div>
+                    <div>Media <span>(2)</span></div>
+                    <div>Entertainment <span>(7)</span></div>
+                    <div>Life <span>(4)</span></div>
+                    <div id="supercoolstuff">Super Cool Stuff <span>(8)</span></div>
+                    <div class="grey-stripe"></div>
+                    <h3>Photo gallery</h3>
+                    <table id="gallery">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </aside>
             </div>
-            <aside class="right-side-contact">
-                <div class="grey-stripe"></div>
-                <h3>About Jetro</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores error incidunt iure
-                    nobis quisquam repellendus repudiandae soluta tempore, tenetur. Accusantium aliquid dolor enim
-                    exercitationem expedita illo labore magnam nisi sed suscipit.</p>
-                <div class="grey-stripe"></div>
-                <h3>Categories</h3>
-                <div>Video <span>(3)</span></div>
-                <div>Sports <span>(5)</span></div>
-                <div>Media <span>(2)</span></div>
-                <div>Entertainment <span>(7)</span></div>
-                <div>Life <span>(4)</span></div>
-                <div id="supercoolstuff">Super Cool Stuff <span>(8)</span></div>
-                <div class="grey-stripe"></div>
-                <h3>Photo gallery</h3>
-                <table id="gallery">
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </aside>
         </div>
         <div class="container-fluid bottom-stripe">
         </div>
+        <div class="secret-bottom hidden-xs"></div>
     </main>
 </section>
 <footer class="footer">
@@ -176,6 +182,7 @@
             </div>
         </div>
     </div>
+    <div class="finish"></div>
 </footer>
 <script src="js/jquery.min.js"></script>
 <script src="js/vendor.min.js"></script>

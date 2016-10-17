@@ -32,3 +32,22 @@ th {
 #data-table_info {
   word-spacing: 3px;
 }
+.pagination > .active {
+  & > a {
+    background: @nav-link-active-color !important;
+    border-color: @nav-link-hover-active-color !important;
+  }
+  &:hover {
+    background: @nav-link-hover-active-color !important;
+    border-color: @nav-link-hover-active-color !important;
+  }
+}
+.paginate_button {
+  & > a {
+  color: black !important;
+  background: @outer-stripes-color !important;
+    &:hover {
+      background: @nav-link-hover-active-color !important;
+    }
+  }
+}

@@ -24,6 +24,7 @@ body {
   max-width: 100%;
   min-height: 100%;
 }
+
 .top-stripe {
   display: block;
   content: '';
@@ -32,6 +33,35 @@ body {
   height: 60px;
   background: @outer-stripes-color;
 }
+
+.secret-top {
+  display: block;
+  content: '';
+  padding: 0;
+  margin: -60px auto 0;
+  max-width: @main-width;
+  height: 60px;
+  background: transparent;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 100%;
+    background: #FFFFFF;
+    width: 10px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    background: #FFFFFF;
+    width: 10px;
+  }
+}
+
 .top-stripe-title {
   max-width: @main-width;
   height: 60px;
@@ -46,26 +76,8 @@ body {
     word-spacing: 3px;
     line-height: 1;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    height: 100%;
-    background: #FFFFFF;
-    width: 10px;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -10px;
-    height: 100%;
-    background: #FFFFFF;
-    width: 10px;
-  }
 }
+
 /*slider-pack*/
 .slider {
   max-width: @main-width;
@@ -73,15 +85,18 @@ body {
   margin: -60px auto 20px;
   padding: 0;
 }
+
 .sliderrow {
   max-width: @main-width;
   max-height: 400px;
   margin: 0;
 }
+
 #carousel-example-generic {
   max-width: @main-width;
   max-height: 400px;
 }
+
 .carousel-inner {
   max-width: @main-width;
   max-height: 400px;
@@ -139,8 +154,9 @@ body {
 }
 
 .glyphicon-chevron-right {
-  right: 20px  !important;
+  right: 20px !important;
 }
+
 /*caption for slides in carouselle*/
 .carousel-caption {
   background: rgba(232, 102, 60, 0.8);
@@ -150,9 +166,10 @@ body {
   max-width: 413px;
   max-height: 124px;
   padding: 0;
-
+  overflow: hidden;
 
   & > h4 {
+    max-height: 31px;
     line-height: 1.29em;
     font-size: 1.8vw;
     padding: 0;
@@ -173,10 +190,13 @@ body {
     position: absolute;
     left: 4.8%;
     top: 48.4%;
+    max-height: 52px;
     padding: 0;
+    overflow: hidden;
     margin: 0;
   }
 }
+
 /*picture line under the slider*/
 .picturesrow {
   max-width: @main-width;
@@ -198,6 +218,7 @@ body {
     opacity: 0.5;
   }
 }
+
 /*3 blocks of articles line*/
 .articles {
   max-width: @main-width;
@@ -301,7 +322,8 @@ body {
     }
   }
 }
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
   .picturesrow {
     max-width: none !important;
   }
@@ -312,6 +334,35 @@ body {
   min-height: @footer-main-height;
   padding: 0;
   background: @outer-stripes-color;
+}
+
+.secret-bottom {
+  display: block;
+  content: '';
+  padding: 0;
+  margin: -@footer-main-height auto 0;
+  max-width: @main-width;
+  min-height: @footer-main-height;
+  background: transparent;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    min-height: @footer-main-height;
+    background: #FFFFFF;
+    width: 10px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    min-height: @footer-main-height;
+    background: #FFFFFF;
+    width: 10px;
+  }
 }
 
 
