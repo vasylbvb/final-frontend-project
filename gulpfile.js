@@ -41,7 +41,8 @@ gulp.task("fonts", function () {
 gulp.task("vendor-css", function () {
     return gulp.src([
         "src/vendor/bootstrap/dist/css/bootstrap.css",
-        "src/vendor/datatables.net-bs/css/dataTables.bootstrap.css"
+        "src/vendor/datatables.net-bs/css/dataTables.bootstrap.css",
+        "src/vendor/jGrowl/jquery.jgrowl.css"
     ])
         .pipe(concat("bootstrap.css"))
         .pipe(nano())
@@ -58,7 +59,9 @@ gulp.task("vendor-js", function () {
     return gulp.src([
         "src/vendor/bootstrap/dist/js/bootstrap.js",
         "src/vendor/datatables.net/js/jquery.dataTables.js",
-        "src/vendor/datatables.net-bs/js/dataTables.bootstrap.js"
+        "src/vendor/datatables.net-bs/js/dataTables.bootstrap.js",
+        "src/vendor/jGrowl/jquery.jgrowl.js",
+        "src/vendor/scrollup/dist/jquery.scrollUp.js"
     ])
         .pipe(addSrc.prepend("src/vendor/jquery/dist/jquery.js"))
         .pipe(concat("vendor.min.js"))

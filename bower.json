@@ -22,6 +22,8 @@
     "normalize-css": "^5.0.0",
     "requirejs": "^2.3.2",
     "datatables.net": "^1.10.12",
-    "datatables.net-bs": "^1.10.12"
+    "datatables.net-bs": "^1.10.12",
+    "jGrowl": "jgrowl#^1.4.5",
+    "scrollup": "^2.4.1"
   }
 }
